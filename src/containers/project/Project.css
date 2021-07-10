@@ -1,0 +1,151 @@
+.portfolio {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: calibri;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5% 20px 5%;
+}
+
+.p-headind {
+  font-size: 30px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 20px;
+  background-color: #55198b;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+.p-box {
+  overflow: hidden;
+  position: relative;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+  height: 80%;
+}
+
+.p-box img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.flex p {
+  color: #000000;
+}
+
+.p-container {
+  width: 90%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
+
+.card {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+  color: #000000;
+}
+
+.card button {
+  border: solid 2px #55198b;
+  background-color: transparent;
+  padding: 7px 22px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.card .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.dark {
+  background-color: #fff;
+}
+
+.overlay-text {
+  font-family: calibri;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #55198b;
+  display: none;
+}
+.overlay-text h1,
+p {
+  color: #ffffff;
+}
+.overlay-text h1 {
+  font-size: 2.2rem;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: 2px;
+}
+.overlay-text p {
+  font-size: 1.2rem;
+  margin: 0px;
+}
+.p-box:hover .overlay-text {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .p-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    height: auto;
+  }
+
+  @media (max-width: 586px) {
+    .p-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      height: 250px;
+      width: 250px;
+      margin-top: 1rem;
+    }
+
+    .p-headind {
+      font-size: 20px;
+    }
+  }
+}
